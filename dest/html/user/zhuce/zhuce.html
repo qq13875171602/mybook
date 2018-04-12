@@ -1,0 +1,27 @@
+<div class="container-fluid body" ng-controller="contr">
+  <from name="form" novalidate>
+  <div class="form-group">
+    <div class="input-group">
+      <label class="input-group-addon">账号</label>
+      <input type="text" name="name" required="required" ng-model="user.user.Uname" placeholder="请输入账号">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <label class="input-group-addon">密码</label>
+      <input type="password" name="password" required="required" ng-model="user.user.Password" ng-minlength="6" placeholder="请输入密码">
+      <span ng-show="form.password.$error.minlength">最少为6位</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <label class="input-group-addon">昵称</label>
+      <input type="text" name="nick" required="required" ng-model="user.user.Nick" placeholder="请输入昵称">
+    </div>
+  </div>
+  <div class="form-group">
+    <span class="btn btn-primary" ng-click="dataas()">添加</span>
+    <span class="btn btn-info" ng-click="kong()">重置</span>
+  </div>
+  </from>
+</div>

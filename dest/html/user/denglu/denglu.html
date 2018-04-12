@@ -1,0 +1,55 @@
+<div class="container-fluid body" ng-controller="conpl">
+   <div class="head">
+        <div class="img">
+           <a href="javascript:void();" title=""><img class="body" src="/image/206.png" ></a>
+        </div>
+        <span class="span">给新版题意见</span>
+   </div>
+   <div class="bxody">
+     <div class="bxody3">
+        <div class="bxodya">
+           <div class="bxody1">登录</div>
+           <form novalidate name="form">
+              <div class="bxody1-1">
+                 <input style="width:268px;height: 40px;font-size: 13px;border:none;outline: none;" type="text" name="name" required="required" ng-model="data.user.Uname"  placeholder="用户名">
+              </div>
+              <!--
+              <div class=" text-danger" ng-if="form.name.$dirty" ng-messages="form.name.$error">
+                <p ng-message="required">请输入用户名</p>
+              </div>
+            -->
+              <div class="bxody1-2">
+                <input style="width:268px;height: 40px;font-size: 13px;border:none;outline: none;" type="password" name="pass" required="required" ng-model="data.user.Password" placeholder="密码">
+              </div>
+              <!--
+              <div class="text-danger " ng-if="form.pass.$dirty" ng-messages="form.pass.error">
+                <p ng-message="required">请输入密码</p>
+              </div>
+              -->
+              <div class="bxody1-3">
+                  <span ng-click="denglu()">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</span>
+              </div>
+           </form>
+        </div>
+        <div class="bxody2">  
+            还没有孔网帐号？&nbsp;&nbsp;&nbsp;&nbsp;<a href="" title="">快速注册</a>
+        </div>
+     </div>
+   </div>
+   <div class="footer">
+      <div class="footer1">
+        © 2002-2017 Kongfz.com 孔夫子旧书网 版权所有
+      </div>
+      <div class="footer2">
+        <ul>      
+          <li><a href="javascript:void();">关于孔网</a></li>
+          <li><a href="javascript:void();">联系我们</a></li>
+          <li><a href="javascript:void();">帮助中心</a></li>
+          <li><a href="javascript:void();">版权隐私</a></li>
+          <li><a href="javascript:void();">广告业务</a></li>
+          <li><a href="javascript:void();">工作机会</a></li>
+          <li><a href="javascript:void();">移动版</a></li>
+        </ul>
+      </div>
+   </div>
+</div>

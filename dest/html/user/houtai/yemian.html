@@ -1,0 +1,50 @@
+<div class="container-fluid body" >
+  <div class="widthqw">
+      <div class="widthqw1">
+        <h4>图书网站<i class="iconfontlk">&#xe62a;</i></h6>
+      </div>
+      <div class="widthqw2" ng-controller="tuichu">
+        <div class="widthqw2-1">欢迎：{{$root.name.Uname}}</div>
+        <div class="widthqw2-2">
+           <span ng-click="close()">[ 退出 ]</span>
+        </div>
+        
+      </div>
+  </div>
+  <div class="widthqwq" >
+    <marquee width="100%" behavior=scroll direction=left align=middle scrollamount=4>欢迎：{{$root.name.Uname}}</marquee>
+  </div>
+  <div class="headerb" ng-controller="plk">
+    <div class="row body">
+      <div class="col-xs-2 lpoas">
+         <div class="left">
+           <div class="left1">
+             <span>分类管理</span>&nbsp;&nbsp;&nbsp;&nbsp;<i ng-click="lick()" ng-show="op" class="glyphicon glyphicon-triangle-right coup"></i><i ng-click="ke()" ng-show="!op" class="glyphicon glyphicon-triangle-bottom coup"></i>
+           </div>
+           <div class="left2" ng-show="!op">
+             <span><a href="#!/bokeTypeAdd">分类添加</a></span>
+           </div>
+           <div class="left2" ng-show="!op">
+             <span><a href="">书籍删除</a></span>
+           </div>
+         </div>
+         <div class="left">
+           <div class="left1">
+             <span>书籍管理</span>&nbsp;&nbsp;&nbsp;&nbsp;<i ng-click="zx()" ng-show="bn" class="glyphicon glyphicon-triangle-right coup"></i><i ng-click="cv()" ng-show="!bn" class="glyphicon glyphicon-triangle-bottom coup"></i>
+           </div>
+           <div class="left2" ng-show="!bn">
+             <span><a href="#!/book">书籍添加</a></span>
+           </div>
+         </div>
+         
+      </div>
+      <div class="col-xs-10 body">
+         <div>
+           
+         </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

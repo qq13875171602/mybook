@@ -1,0 +1,42 @@
+<div class="container-fluid" ng-controller="plk" ng-repeat="ax in nbgf">
+  <form name="form">
+      <div class="form-group">
+         <div class="input-group">
+            <label class="input-group-addon">分类</label>
+            <select class="form-control" ng-model="zbvc.Tid" ng-init="zbvc.Tid=1">
+              <option ng-value="gh.tid" ng-repeat="gh in pl">{{gh.tid}}</option>
+            </select>
+         </div>
+      </div>
+      <div class="form-group">
+         <div class="input-group">
+            <label class="input-group-addon">书籍</label>
+            <input type="text" ng-value="'{{ax.bname}}'" ng-model="zbvc.Bname" name="book" required="required" class="form-control">
+         </div>
+      </div>
+      <div class="form-group">
+         <div class="input-group">
+            <label class="input-group-addon">作者</label>
+            <input type="text" ng-value="'{{ax.author}}'" ng-model="zbvc.Author" name="zuozhe" required="required" class="form-control">
+         </div>
+      </div>
+      <div class="form-group">
+         <div class="input-group">
+            <label class="input-group-addon">出版社</label>
+            <input type="text" ng-value="'{{ax.press}}'" ng-model="zbvc.Press" name="chubanshe" required="required" class="form-control">
+         </div>
+      </div>
+      <div class="form-group">
+         <div class="input-group">
+            <label class="input-group-addon">状态</label>
+            <select ng-model="zbvc.Ifbname" ng-init="zbvc.Ifbname='y'" name="zhuangtai" class="form-control">
+               <option ng-value="'y'">{{ax.ifbname}}</option>
+               <option ng-value="'n'">n</option>
+            </select>
+         </div>
+      </div>
+      <div class="form-group">
+        <span type="button" class="btn btn-primary" ng-click="xuigai(ax.bid)">确定</span>
+      </div>
+  </form>
+</div>

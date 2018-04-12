@@ -1,0 +1,70 @@
+<div class="container-fluid body">
+  <div class="widthqw">
+      <div class="widthqw1">
+        <h4>图书网站<i class="iconfontlk">&#xe62a;</i></h6>
+      </div>
+      <div class="widthqw2">
+        欢迎：{{$root.name.Uname}}
+      </div>
+  </div>
+  <div class="widthqwq">
+    <marquee width="100%" behavior=scroll direction=left align=middle scrollamount=4>欢迎：{{$root.name.Uname}}</marquee>
+  </div>
+  <div class="headerb" ng-controller="plk">
+    <div class="row body">
+      <div class="col-xs-2" >
+         <div class="left">
+           <div class="left1">
+             <span>分类管理</span>&nbsp;&nbsp;&nbsp;&nbsp;<i ng-click="lick()" ng-show="op" class="glyphicon glyphicon-triangle-right coup"></i><i ng-click="ke()" ng-show="!op" class="glyphicon glyphicon-triangle-bottom coup"></i>
+           </div>
+           <div class="left2" ng-show="!op">
+             <span><a href="">分类添加</a></span>
+           </div>
+           <div class="left2" ng-show="!op">
+             <span><a href="">书籍删除</a></span>
+           </div>
+         </div>
+         <div class="left">
+           <div class="left1">
+             <span>书籍管理</span>&nbsp;&nbsp;&nbsp;&nbsp;<i ng-click="zx()" ng-show="bn" class="glyphicon glyphicon-triangle-right coup"></i><i ng-click="cv()" ng-show="!bn" class="glyphicon glyphicon-triangle-bottom coup"></i>
+           </div>
+           <div class="left2" ng-show="!bn">
+             <span><a href="#!/book">书籍添加</a></span>
+           </div>
+         </div>
+      </div>
+      <div class="col-xs-10 body">
+         <div class="right">
+            <div class="right1">
+              <span>&nbsp;&nbsp;&nbsp;<img src="image/标题.png">&nbsp;&nbsp;公告信息管理</span>
+            </div>
+            <form name="form">
+            <div class="right2">
+               分类添加：<input ng-model="shuju.Booktype.Type" type="text" name="type" required="required" style="width:120px">&nbsp;&nbsp;<span ng-click="add()" class="kuang btn">添加</span>
+            </div>
+            </form>
+            <div class="right3">
+              <table class="table table-danger">
+                <thead>
+                  <tr >
+                    <th>编号</th>
+                    <th>分类</th>
+                    <th>时间</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="cn in pl">
+                    <td>{{cn.tid}}</td>
+                    <td>{{cn.type}}</td>
+                    <td>{{cn.datatime}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

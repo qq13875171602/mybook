@@ -1,0 +1,26 @@
+<div class="container-fluid" ng-controller="mask">
+   <form name="" method="get" accept-charset="utf-8">
+      <div class="form-group">
+        <div class="input-group">
+          <label class="input-group-addon">账号</label>
+          <input type="text" name="name"  ng-model="vb.user.Uname">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <label class="input-group-addon">密码</label>
+          <input type="password" name="password"  ng-model="vb.user.Password">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <label class="input-group-addon">昵称</label>
+          <input type="password" name="text"  ng-model="vb.user.Nick">
+        </div>
+      </div>
+      <div class="form-group">
+        <span type="button" class="btn btn-primary" ng-click="add()">添加</span>
+        <span type="button" class="btn btn-primary" ng-click="">重置</span>
+      </div>
+   </form>
+</div>

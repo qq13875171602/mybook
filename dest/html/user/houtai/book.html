@@ -1,0 +1,97 @@
+<div class="container-fluid body" >
+  <div class="widthqw">
+    <div class="widthqw1">
+      <h4>图书网站<i class="iconfontlk">&#xe62a;</i></h6>
+    </div>
+    <div class="widthqw2">
+      欢迎：{{$root.name.Uname}}
+    </div>
+  </div>
+  <div class="widthqwq" >
+    <marquee width="100%" behavior=scroll direction=left align=middle scrollamount=4>欢迎：{{$root.name.Uname}}</marquee>
+  </div>
+  <div class="headerb" ng-controller="plk">
+    <div class="row body">
+      <div class="col-xs-2 lpoas">
+        <div class="left">
+          <div class="left1">
+            <span>分类管理</span>&nbsp;&nbsp;&nbsp;&nbsp;<i ng-click="lick()" ng-show="op" class="glyphicon glyphicon-triangle-right coup"></i><i ng-click="ke()" ng-show="!op" class="glyphicon glyphicon-triangle-bottom coup"></i>
+          </div>
+          <div class="left2" ng-show="!op">
+            <span><a href="#!/bokeTypeAdd">书籍添加</a></span>
+          </div>
+          <div class="left2" ng-show="!op">
+            <span><a href="">书籍删除</a></span>
+          </div>
+        </div>
+        <div class="left">
+          <div class="left1">
+            <span>书籍管理</span>&nbsp;&nbsp;&nbsp;&nbsp;<i ng-click="zx()" ng-show="bn" class="glyphicon glyphicon-triangle-right coup"></i><i ng-click="cv()" ng-show="!bn" class="glyphicon glyphicon-triangle-bottom coup"></i>
+          </div>
+          <div class="left2" ng-show="!bn">
+            <span><a href="#!/book">书籍添加</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-10 body">
+        <div class="right">
+          <div class="right1">
+            &nbsp;&nbsp;&nbsp;<img src="/image/标题.png">&nbsp;&nbsp;&nbsp;图书信息管理
+          </div>
+          <form name="form">
+            <div class="right2">
+              书籍：<input type="text" name="text" required="required" ng-model="like.book.Bname" style="width:120px;">
+              &nbsp;作者：<input type="text" name="text" required="required" ng-model="like.book.Author" style="width:120px;">
+              &nbsp;出版社：<input type="text" name="text" required="required" ng-model="like.book.Press" style="width:120px;">
+              &nbsp;分类：&nbsp;<select  ng-model="like.book.Tid" style="width:80px;">
+                <option  ng-value="gh.tid" ng-repeat="gh in pl">{{gh.type}}</option>
+              </select>
+              &nbsp;&nbsp;<span class="kuang btn" ng-click="tianjia()">添加</span>
+              &nbsp;&nbsp;<input type="text" name="text" required="required" ng-model="mohu.book.Bname" style="width:120px;">&nbsp;&nbsp;<span ng-click="okl()" class="kuang btn">查询</span>
+            </div>
+          </form>
+          <div class="right3">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>编号</th>
+                  <th>分类</th>
+                  <th>书籍</th>
+                  <th>作者</th>
+                  <th>出版社</th>
+                  <th>状态</th>
+                  <th>时间</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="sd in query">
+                  <td>{{sd.bid}}</td>
+                  <td>{{sd.tid}}</td>
+                  <td>{{sd.bname}}</td>
+                  <td>{{sd.author}}</td>
+                  <td>{{sd.press}}</td>
+                  <td>{{sd.ifbname}}</td>
+                  <td>{{sd.datatime}}</td>
+                  <td>
+                    <span class="btn btn-primary" ng-click="delete(sd.bid)">删除</span>
+                    <span class="btn btn-info" ng-click="chaxunqw(sd.bid)">修改</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <nav>
+             <ul class="pagination">
+              <li><a href="">总个数{{page.Count}}/当前页{{page.PageNumber}}/总页数{{page.PageCount}}</a></li>
+              <li ng-click="okl()"><a href="javascript:void(0)">首页</a></li>
+              <li ng-click="sd(page.PageNumber+1)"><a href="javascript:void(0)">下一页</a></li>
+              <li ng-click="qw(page.PageNumber-1)"><a href="javascript:void(0)">上一页</a></li>
+              <li ng-click="ty(page.PageCount)"><a href="javascript:void(0)">尾页</a></li>
+             </ul>
+          </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
