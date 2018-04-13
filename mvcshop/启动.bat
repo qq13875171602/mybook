@@ -1,0 +1,1 @@
+..\jdk8\bin\java -jar MyJavaWebService-1.0.0.0.jar
